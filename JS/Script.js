@@ -1,6 +1,6 @@
 var form = document.getElementById("ProductForm")
-var IngredientsInputString = document.getElementById("Ingredients");
-var ProductNameInputString = document.getElementById("PName");
+var IngredientsInputString = document.getElementById("IngredientsInput");
+var ProductNameInputString = document.getElementById("PNameInput");
 
 var IngredientsList = ["acetylated lanolin",
 "acetylated lanolin alcohol",
@@ -50,7 +50,7 @@ function Scan(){
     const UserInput = IngredientsInputString.value.toLowerCase().split(", ");
     
     UserInput[UserInput.length-1] = UserInput[UserInput.length-1].replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"")
-    console.log(UserInput)    
+
     let Matched = UserInput.filter(element => IngredientsList.includes(element));
 
     if(Matched.includes("cetearyl alcohol") && Matched.includes("ceteareth-20")){
@@ -61,6 +61,6 @@ function Scan(){
         Matched = Matched.filter(item => !ComboList.includes(item));
     }
 
-    document.getElementById("IngredientDetected").innerHTML = Matched.length+ " Ingredients Found in "+ProductNameInputString.value+": " + Matched ;
+    document.getElementById("IngredientDetected").innerHTML = Matched.length+ " Ingredients Found in "+ProductNameInputString.value+": " + Matched;
 
 }

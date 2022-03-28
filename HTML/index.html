@@ -5,6 +5,7 @@
         <title>Skin Care Ingredients Checker</title>
         <link rel="stylesheet" href="../CSS/Styles.css">
         <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
+        <link rel="icon" href="../images/favicon.ico">
     </head>
 
     <body>
@@ -15,10 +16,10 @@
 
                 <form id="ProductForm">
                     <label for="PName">Product Name:</label>
-                    <input type="text" id="PName" name="PName"><br>
+                    <input type="text" id="PNameInput" name="PName"><br>
 
                     <label for="Ingredients">Ingredients:</label>
-                    <input type="text" id="Ingredients" name="Ingredients"><br>
+                    <textarea name="Ingredients" id="IngredientsInput" cols="30" rows="10"></textarea><br>
 
                     <input type="Button" onclick= "Scan()" value = "Submit" id="SubmitButton">
 
@@ -34,3 +35,5 @@
     <script src="../JS/Script.js"></script>
 
 </html>
+
+<a href="https://www.flaticon.com/free-icons/body-lotion" title="body lotion icons">Body lotion icons created by Freepik - Flaticon</a>
