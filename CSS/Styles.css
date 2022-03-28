@@ -102,10 +102,14 @@ label{
     }
 
     #PNameInput{
+        border-width: 1px;
+        border-style: solid;
+        border-color: gray;
         height: 2.5vh;
         width: 20vw;
         font-size: 1vw;
-        margin-right:0.7vw;
+        margin-left: 0.8vw;
+        margin-right:0.8vw;
         padding-right: 0vw;
     }
 
