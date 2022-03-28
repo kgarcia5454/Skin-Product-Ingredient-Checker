@@ -1,6 +1,6 @@
 var form = document.getElementById("ProductForm")
 var IngredientsInputString = document.getElementById("Ingredients");
-var combo = false;
+var ProductNameInputString = document.getElementById("PName");
 
 var IngredientsList = ["acetylated lanolin",
 "acetylated lanolin alcohol",
@@ -45,28 +45,22 @@ var IngredientsList = ["acetylated lanolin",
 
 var ComboList = ["ceteareth-20","cetearyl alcohol"]
 
-
-// GROUP Cetearyl alcohol + Ceteareth 20 — only when in the same formulation, not on their own.
-
-
-function test(){
-    combo=false;
-    const test = IngredientsInputString.value.toLowerCase().split(", ");
-    console.log(test);
+function Scan(){
+    var combo=false;
+    const UserInput = IngredientsInputString.value.toLowerCase().split(", ");
     
-    let intersection = test.filter(element => IngredientsList.includes(element));
-    console.log(intersection);
-   
-    if(intersection.includes("cetearyl alcohol") && intersection.includes("ceteareth-20")){
+    UserInput[UserInput.length-1] = UserInput[UserInput.length-1].replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"")
+    console.log(UserInput)    
+    let Matched = UserInput.filter(element => IngredientsList.includes(element));
+
+    if(Matched.includes("cetearyl alcohol") && Matched.includes("ceteareth-20")){
         combo = true;
     }
 
-    console.log(combo);
-
     if(!combo){
-        intersection = intersection.filter(item => !ComboList.includes(item));
+        Matched = Matched.filter(item => !ComboList.includes(item));
     }
 
-    document.getElementById("CringeDetected").innerHTML =intersection.length+ " Ingredients Found: " + intersection;
+    document.getElementById("IngredientDetected").innerHTML = Matched.length+ " Ingredients Found in "+ProductNameInputString.value+": " + Matched ;
 
 }

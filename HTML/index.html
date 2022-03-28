@@ -2,26 +2,32 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-        <title>Ingredient Checker</title>
+        <title>Skin Care Ingredients Checker</title>
         <link rel="stylesheet" href="../CSS/Styles.css">
+        <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
     </head>
 
     <body>
+        
+            <div id="Page">
+            
+                <header id="H1">Skin Care Ingredients Checker</header>
 
-        <header>Ingredient Checker</header>
+                <form id="ProductForm">
+                    <label for="PName">Product Name:</label>
+                    <input type="text" id="PName" name="PName"><br>
 
-        <form id="ProductForm">
-            <label for="PName">Product Name:</label> <br>
-            <input type="text" id="PName" name="PName"><br>
+                    <label for="Ingredients">Ingredients:</label>
+                    <input type="text" id="Ingredients" name="Ingredients"><br>
 
-            <label for="Ingredients">Ingredients:</label> <br>
-            <input type="text" id="Ingredients" name="Ingredients"><br>
+                    <input type="Button" onclick= "Scan()" value = "Submit" id="SubmitButton">
 
-            <input type="Button" onclick= "test()" value = "submit">
+                </form>
 
-        </form>
+                <p id="IngredientDetected"></p>
 
-        <p id="CringeDetected"></p>
+            </div>
+
 
     </body>
 

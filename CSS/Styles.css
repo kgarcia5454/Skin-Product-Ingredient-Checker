@@ -1,6 +1,77 @@
+
 body{
-    background: #ee9ca7;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #EECDA3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #EF629F, #EECDA3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #EF629F, #EECDA3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+
+
+}
+
+#Page{   
+    background-color: rgba(255, 255, 255, 0.735);
+    margin-top: 25vh;
+    font-family: 'Dekko';
+    border: solid;
+    border-width: 0.5%;
+    box-shadow: 15px 10px #91636933;
+}
+
+#H1{
+    text-align: center;
+    
+    font-size: 30px;
+
+}
+
+#ProductForm{
+    text-align: center;
+}
+
+label{
+    font-size: 30px;
+}
+
+#IngredientDetected{
+    text-align: center;
+    word-break: normal;
+}
+
+#SubmitButton{
+    background-color:   #ce95ae;
+    box-shadow: 8px 5px #ee9ca76d;
+    border-radius: 8px;
+    border-color: #ee9ca7;
+    border-style: solid;
+    border-width: 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: 'Dekko';
+    font-size: 25px;
+    line-height: 20px;
+    padding: 10px 16px;
+    text-align: center;
+}
+
+#SubmitButton:hover{
+    background-color: #e6a9c2;
+}
+
+#SubmitButton:active{
+    border-color: white;
+}
+
+
+@media screen and (min-width: 801px){
+    #Page{
+        margin-top: 35vh;
+        margin-left: 30vw;
+        width: 40%;
+    }
+
+    #H1{
+        font-size: 45px;
+    
+    }
 
 }
